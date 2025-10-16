@@ -1280,4 +1280,5 @@ Auto Scaling
 
 - Monitors your apps and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost
 - Provides a simple, powerful UI that enables you to build scaling plans for resources
+
 - The resources that are included are EC2 instances and spot fleets, ECS tasks, DynamoDB tables and indexes, aurora replicas
