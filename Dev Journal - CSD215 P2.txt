@@ -1,0 +1,231 @@
+Why programming paradigms?
+
+- Manages complexity
+- More readable, reusable, testable, and easier to change
+
+Programming paradigms definition
+
+- An approach to programming using a specific, constrained set of techniques with the goal of making it easier to write, read, maintain, and reuse complex software.
+
+Example paradigms
+
+- Structured
+- Object Oriented Programming (OOP)
+- Functional Programming (FP)
+- Procedural
+- Logical
+- Reactive
+
+Languages and paradigms
+
+- Most languages support one or more paradigms
+- Syntax features that make writing a paradigm easier
+
+Structured Programming
+
+- Use of flow-of-control programming structures like:
+- Conditionals
+- Loops
+- Function calls & returns
+- Try/catch
+
+- Before these there was goto which jumps to any line of code using the line number or labels
+
+Condtional with goto
+
+x > y ? goto then : goto else
+then: 
+    # Do one thing
+
+else:
+    # Do another thing
+
+- The labels are not keywords but just identifiers
+- then else here can be then1 and then2
+
+Loop with goto
+
+loop:
+    i > 10 ? goto done
+    # Repeat something 
+    i += 1
+    goto loop
+done:
+    # continue from here...
+
+Strucutred Programming
+
+- Most new languages don't include goto statements
+- Uses syntax to enforce structure for well understood control flow patterns
+
+OOP
+
+- Everything is an object
+- Objects are instances of a type
+- Objects communicate together to accomplish a task
+- Key concepts:
+- Objects/classes (encapsulation)
+- Inheritance hierarchies (generalization)
+- Interfaces (abstraction)
+- Polymorphism
+
+Before OOP
+
+- Possible to write OOP style but requires conscious discipline
+- Keep methods and related instance variables in same file by convention
+- Must manually provide 'this' parameter to methods
+- Use of 'function pointers' to accomplish inheritance
+- None of these are enforced or enabled by the language
+
+OOP Languages
+
+- Built-in syntax to guide you towards OOP
+- Helps avoid complexity
+- Inheritance, polymorphism, and abstraction are built-in
+
+OOP Languages
+
+- C++
+- C#
+- Java
+- Kotlin
+- PHP
+- Python
+- Ruby
+
+Functional programming
+
+- Jargon-y
+- Been around since the beginning of Comp Sci
+- Rich academic history
+- It is rooted in a field of math called "lambda calculus"
+- Monads and Functors and Lambdas
+- Involves writing software using pure mathematical functions with no side effects
+- A side effect is anything a function does other than return a value
+- E.g. print to screen, send email, update database, update instance variable
+- A pure function depends only on its parameters, and has no side effects; it does nothing other than return a value
+- An impure function is a function that is not pure
+- FP involves writing code using pure functions as much as possible, with techniques for making side effects easier to manage
+
+Key Ideas of FP
+
+- Data should be immutable, and changes to data should be represented by creating new values with those changes applied
+- As much as possible, avoid side effects (e.g. printing to screen, updating a database, changing value of a variable) by making use of pure functions
+
+Two kinds of FP languages
+
+- More or less pure functional languages:
+- Lisp style: Clojure, Common Lisp, Racket, Scheme
+- Other: Elixir, Erlang, F#, Haskell, OCaml
+- Languages that support a functional style
+- C++, C#, Go, Java, JavaScript, Kotlin, PHP, Python, Rust, Scala, Swift
+- Most modern languages
+
+Functional Purity of programming languages
+
+- Never has side effects
+- No loops
+- No variables
+
+FP
+
+- First class functions
+- Functions are values!
+- Functions can be:
+- Assigned to variables
+- If the language has variables—some functional languages have no assignment
+- Passed as arguments to other functions
+- Returned from functions
+- Most languages that support FP have higher-order functions
+- A higher-order function is any function that accepts as a parameter or returns as a value another function
+
+OOP vs FP
+
+- Shines when there are many things, each with a fixed set of operations
+- Adding/removing things is easy 
+- Adding/removing operations harder 
+- Shines when there are many operations, that work with a fixed set of things
+- Adding/removing operations is easy 
+- Adding/removing things is harder 
+- FP has better tools than OOP for writing distributed software
+- FP techniques are more helpful than OOP in systems of programs that must communicate over a network
+
+Data, Calculations, and Actions
+
+Functional Thinking
+
+- One of the first such FP techniques is to distinguish data, calculations, and actions in one's code
+
+Actions
+
+- An action is an instruction for which the time and order in which it is called matters
+- Actions have side effects—calling them causes some change in a system
+- Also called impure functions
+
+Non-Actions
+
+- Everything for which time and order to not matter is not an action
+- Everything that is not an action is either a calculation or data
+
+Data
+
+- Data is facts about events
+- Data does no work
+- Variables, arrays, etc.
+- Immutable data cannot be changed
+- Mutable data can be changed
+- Functional programmers prefer immutable data over mutable data
+
+Techniques for Data
+
+- Organize data for efficient access
+- Disciplines for storing data
+- Principles for capturing what is important using data
+
+Calculations
+
+- Computation from input to output 
+- No side effects
+- Called pure functions
+- The same calculation performed on the same input ALWAYS produces the same output
+- The input and output of a calculation is usually data
+- E.g., find the maximum value of a collection; check if an email address is valid
+- Functional programmers prefer calculations over actions
+
+Function composition
+
+- Function composition involves calling a function with the results of some other function
+- Calculations are easily composable BECAUSE they are referentially transparent
+
+Calculation Techniques
+
+- Calculations are composable (because they are referentially transparent)
+- IDEs can automatically analyze calculations and check for correct usage
+- Calculations are much easier to test than actions
+
+Functional Programmers Prefer
+
+- Data over both calculations and actions
+- Immutable data over mutable data
+- Calculations over actions
+
+Practical FP
+
+- The primary skill of functional programmers is recognizing which parts of their code is data vs calculations vs actions
+
+Records
+
+- A Java record can be used to represent a data type
+
+Enums
+
+- Enums can be used to represent a specific fixed set of values
+- Better than String because compiler will verify that code uses valid values
+
+Sealed Interfaces
+
+- Sealed interfaces allow only a predetermined set of subtypes
+- Useful when you need to represent 'either this type or that type'
+
+
+
